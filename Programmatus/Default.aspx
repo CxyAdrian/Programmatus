@@ -1,9 +1,16 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/GameMaster.Master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
 
-<asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
+<asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="GameContent">
     
-    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+    <asp:UpdatePanel ID="GameContentUpdatePanel" runat="server">
+    </asp:UpdatePanel>
+    
+</asp:Content>
+
+<asp:Content runat="server" ID="top" ContentPlaceHolderID="TopContent">
+
+    <asp:UpdatePanel ID="EnergyUpdatePanel" runat="server">
     </asp:UpdatePanel>
     
 </asp:Content>

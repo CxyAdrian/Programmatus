@@ -1,14 +1,15 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="GameMaster.master.cs" Inherits="GameMaster" %>
 
 <!DOCTYPE html>
-<html lang="en">
-<head runat="server">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
     <meta charset="utf-8" />
     <title><%: Page.Title %> - My ASP.NET Application</title>
-    <asp:PlaceHolder runat="server">      
+    <asp:PlaceHolder ID="PlaceHolder1" runat="server">      
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
-    <webopt:BundleReference runat="server" Path="~/Content/css" /> 
+    <webopt:BundleReference ID="BundleReference1" runat="server" Path="~/Content/css" /> 
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="viewport" content="width=device-width" />
     <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
@@ -20,9 +21,9 @@
     </style>
 </head>
 <body>
-    <form runat="server">
-         <div class="float-left">
-                <img src="Images/logo.jpg" style="height: 115px; width: 314px" />
+    <form id="form1" runat="server">
+        <div class="float-left">
+                <img src="Images/logo.jpg" />
          </div>
              <asp:ScriptManager ID="ScriptManager1" runat="server">
         <Scripts>
@@ -44,15 +45,19 @@
 
         </Scripts>
     </asp:ScriptManager>
-    <header>
-        <div class="content-wrapper">
-            <div class="float-left">
-                <p class="site-title">
-                    &nbsp;</p>
-            </div>
-            <div class="float-right">
+    <div id="body" style="position:absolute; top: 50%; left: 25%; margin-top:auto; margin-left: auto; width: 50%; height: 336px;">
+
+        <section>
+            <asp:ContentPlaceHolder runat="server" ID="GameContent" >
+            <p>
+                &nbsp;</p>
+        </asp:ContentPlaceHolder>
+        </section>
+        </div>
+
+                    <div class="float-right">
                 <section id="login">
-                    <asp:LoginView runat="server" ViewStateMode="Disabled" >
+                    <asp:LoginView ID="LoginView1" runat="server" ViewStateMode="Disabled" >
                         <AnonymousTemplate>
                             <ul>
                                 <li><a id="registerLink" runat="server" href="~/Account/Register">Register</a></li>
@@ -61,31 +66,36 @@
                         </AnonymousTemplate>
                         <LoggedInTemplate>
                             <p>
-                                Hello, <a runat="server" class="username" href="~/Account/Manage" title="Manage your account">
-                                    <asp:LoginName runat="server" CssClass="username" />
+                                Hello, <a id="A1" runat="server" class="username" href="~/Account/Manage" title="Manage your account">
+                                    <asp:LoginName ID="LoginName1" runat="server" CssClass="username" />
                                 </a>!
-                                <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" />
+                                <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" />
                             </p>
                         </LoggedInTemplate>
                     </asp:LoginView>
                 </section>
             </div>
+
+        <div id="top" style="position:absolute; top: 50px; left: 328px; height: 77px; width: 295px;">
+            <section>
+                <asp:ContentPlaceHolder runat="server" ID="TopContent" >
+                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    </asp:UpdatePanel>
+                </asp:ContentPlaceHolder>
+            </section>
+            </div>
+
+         <div id="left" style="position:absolute; top: 283px; left: 10%; width: 122px; height: 144px;">
+            <section>
+           <asp:ContentPlaceHolder runat="server" ID="LeftContent" />
+            </section>
         </div>
-    </header>
-    <div id="body" style="position:absolute; top: 50%; left: 25%; margin-top:auto; margin-left: auto; width: 50%; height: 336px;">
-        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
-        <section>
-            <asp:ContentPlaceHolder runat="server" ID="MainContent" >
-            <p>
-                &nbsp;</p>
-        </asp:ContentPlaceHolder>
-        </section>
-    </div>
-       
-    <footer>
-        <div class="content-wrapper">
+        <div id="right" style="position:absolute; top: 283px; right: 10%; width: 122px; height: 144px;">
+            <section>
+             <asp:ContentPlaceHolder runat="server" ID="RightContent" />
+            </section>
         </div>
-    </footer>
+
     </form>
 </body>
 </html>
