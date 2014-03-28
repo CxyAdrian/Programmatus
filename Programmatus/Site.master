@@ -72,23 +72,25 @@
             </div>
         </div>
     </header>
-    <div id="body" style="position:absolute; top: -44%; left:-20%; margin-top:50%; margin-left: 50%; width: 420px; height: 336px;">
+    <div id="body" style="position:absolute; top: 50%; left: 25%; margin-top:auto; margin-left: auto; width: 50%; height: 336px;">
         <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
         <section>
             <asp:ContentPlaceHolder runat="server" ID="MainContent" >
-   
             <p>
                 &nbsp;</p>
         </asp:ContentPlaceHolder>
-
         </section>
-   
     </div>
-        <div id="left" style="position:absolute; top: -45%; left: -46%; width: 122px; height: 144px;">
+
+        <div id="left" style="position:absolute; top: 283px; left: 10%; width: 122px; height: 144px;">
+            <section>
            <asp:ContentPlaceHolder runat="server" ID="LeftContent" />
+            </section>
         </div>
-        <div id="right" style="position:absolute; top: -16px; left: 689px; width: 121px; height: 160px;">
+        <div id="right" style="position:absolute; top: 283px; right: 10%; width: 122px; height: 144px;">
+            <section>
              <asp:ContentPlaceHolder runat="server" ID="RightContent" />
+            </section>
         </div>
        
     <footer>

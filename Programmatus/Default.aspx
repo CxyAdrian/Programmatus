@@ -8,3 +8,11 @@
     
 </asp:Content>
 
+<asp:Content runat="server" ID="left" ContentPlaceHolderID="LeftContent">  
+    <asp:Button ID="Button1" runat="server" BackColor="#0099FF" Text="Button" Width="112px" />
+</asp:Content>
+
+<asp:Content runat="server" ID="right" ContentPlaceHolderID="RightContent">
+    <asp:Button ID="Button2" runat="server" BackColor="#0099FF" Text="Button" Width="112px" />
+</asp:Content>
+

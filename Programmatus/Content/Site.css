@@ -4,8 +4,8 @@
 }
 
 body {
-    background-image:url('http://localhost:9676/Programmatus/Images/background.jpg');
-    background-color:none;
+    background-image:url('http://localhost:2737/Programmatus/Images/background.jpg');
+    background-color:#0099FF;
     border-top: solid 10px #000;
     color: #333;
     font-size: .85em;
@@ -98,13 +98,13 @@ h5, h6 {
 }
 
 #body {
-    background-color:#0094ff;
+    background-color:#0099FF;
     clear: both;
     padding-bottom: 35px;
 }
 
     .main-content {
-        background-color:#0094ff;
+        background:none;
         padding-left: 10px;
         padding-top: 30px;
     }
@@ -146,6 +146,7 @@ footer {
 /* login
 ----------------------------------------------------------*/
 #login {
+    background:none;
     display: block;
     font-size: .85em;
     margin: 0 0 10px;
@@ -403,7 +404,7 @@ fieldset {
         background: #fff;
         color: #333;
         font-size: 1.2em;
-        margin: 5px 0 6px 0;
+        margin: 5px 0 6px 5px;
         padding: 5px;
         width: 300px;
     }
@@ -433,8 +434,7 @@ fieldset {
         font-weight: 600;
         padding: 7px;
         margin-right: 8px;
-        width: auto;
-    }
+        }
 
     td input[type="submit"],
     td input[type="button"],
