@@ -98,13 +98,13 @@ h5, h6 {
 }
 
 #body {
-    background:none;
+    background-color:#0094ff;
     clear: both;
     padding-bottom: 35px;
 }
 
     .main-content {
-        background:none;
+        background-color:#0094ff;
         padding-left: 10px;
         padding-top: 30px;
     }
@@ -153,7 +153,6 @@ footer {
 }
 
     #login a {
-        background:none;
         background-color: #d3dce0;
         margin-left: 10px;
         margin-right: 3px;
