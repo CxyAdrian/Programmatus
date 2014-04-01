@@ -47,9 +47,9 @@
                                 <asp:Label runat="server" AssociatedControlID="ConfirmPassword">Confirm password</asp:Label>
                                 <asp:TextBox runat="server" ID="ConfirmPassword" TextMode="Password" />
                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="ConfirmPassword"
-                                     CssClass="field-validation-error" Display="Dynamic" ErrorMessage="The confirm password field is required." />
+                                    CssClass="field-validation-error" Display="Dynamic" ErrorMessage="The confirm password field is required." />
                                 <asp:CompareValidator runat="server" ControlToCompare="Password" ControlToValidate="ConfirmPassword"
-                                     CssClass="field-validation-error" Display="Dynamic" ErrorMessage="The password and confirmation password do not match." />
+                                    CssClass="field-validation-error" Display="Dynamic" ErrorMessage="The password and confirmation password do not match." />
                             </li>
                         </ol>
                         <asp:Button runat="server" CommandName="MoveNext" Text="Register" />

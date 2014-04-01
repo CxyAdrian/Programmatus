@@ -23,9 +23,9 @@
 <body>
     <form id="form1" runat="server">
         <div class="float-left">
-            <img src="http://localhost:2737/Programmatus/Images/logo2.jpg" alt="logo"/>
+            <img src="http://localhost:2737/Programmatus/Images/logo2.jpg" alt="logo" />
         </div>
-        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="false">
             <Scripts>
                 <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=272931&clcid=0x409 --%>
                 <%--Framework scripts--%>
@@ -48,14 +48,14 @@
 
             <section>
                 <asp:ContentPlaceHolder runat="server" ID="GameContent">
-                    <p>
-                        &nbsp;
-                    </p>
+
+                    <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
+                    </asp:UpdatePanel>
                 </asp:ContentPlaceHolder>
             </section>
         </div>
 
-        <div class="float-right">
+        <div class="float-right" style="background-color: #0099FF">
             <section id="login">
                 <asp:LoginView ID="LoginView1" runat="server" ViewStateMode="Disabled">
                     <AnonymousTemplate>
@@ -65,34 +65,42 @@
                         </ul>
                     </AnonymousTemplate>
                     <LoggedInTemplate>
-                        <p>
-                            Hello, <a id="A1" runat="server" class="username" href="~/Account/Manage" title="Manage your account">
+                        <p style="background-color: #0099FF">
+                            Hello, <a id="A1" runat="server" class="username" href="~/Account/Manage" title="Manage your account" style="background-color: #0099FF">
                                 <asp:LoginName ID="LoginName1" runat="server" CssClass="username" />
-                            </a>!
-                                <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" />
+                            </a>
+                            <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" />
                         </p>
                     </LoggedInTemplate>
                 </asp:LoginView>
             </section>
         </div>
 
-        <div id="top-content" style="position: absolute; top: 50px; left: 328px; height: 115px; width: 295px;">
+        <div id="top" style="position: absolute; top: 50px; left: 328px; height: auto; width: auto;">
             <section>
                 <asp:ContentPlaceHolder runat="server" ID="TopContent">
                     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                        <ContentTemplate>
+                            usernamelabel;
+                        </ContentTemplate>
                     </asp:UpdatePanel>
+
                 </asp:ContentPlaceHolder>
             </section>
         </div>
 
-        <div id="left" style="position: absolute; top: 25%; left: 10%; width: auto; height: auto;">
+        <div id="left" style="position: absolute; top: 25%; left: 15%; width: auto; height: auto;">
             <section>
                 <asp:ContentPlaceHolder runat="server" ID="LeftContent" />
-            </section>
-        </div>
-        <div id="right" style="position: absolute; top: 25%; right: 10%; width: auto; height: auto;">
-            <section>
-                <asp:ContentPlaceHolder runat="server" ID="RightContent" />
+                <asp:Button ID="Overview" runat="server" BackColor="#0099FF" Text="Overview" Width="112px" />
+                <br />
+                <asp:Button ID="Market" runat="server" Text="Market" BackColor="#0099FF" Width="112px" />
+                <br />
+                <asp:Button ID="Skills" runat="server" BackColor="#0099FF" Text="Train skills" Width="112px" />
+                <br />
+                <asp:Button ID="Job" runat="server" Text="Job" BackColor="#0099FF" Width="112px" />
+                <br />
+                <asp:Button ID="Hack" runat="server" Text="Hack player" BackColor="#0099FF" Width="112px" />
             </section>
         </div>
 
