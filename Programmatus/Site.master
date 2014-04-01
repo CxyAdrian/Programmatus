@@ -50,7 +50,7 @@
                         &nbsp;
                     </p>
                 </div>
-                <div class="float-right">
+                <div class="float-right" style="background-color:#0099FF">
                     <section id="login">
                         <asp:LoginView runat="server" ViewStateMode="Disabled">
                             <AnonymousTemplate>

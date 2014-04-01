@@ -2,6 +2,10 @@
 
 
 <asp:Content runat="server" ID="body" ContentPlaceHolderID="GameContent">
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <ContentTemplate>
+        </ContentTemplate>
+    </asp:UpdatePanel>
 </asp:Content>
 
 <asp:Content runat="server" ID="top" ContentPlaceHolderID="TopContent">
