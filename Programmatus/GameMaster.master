@@ -48,9 +48,6 @@
 
             <section>
                 <asp:ContentPlaceHolder runat="server" ID="GameContent">
-
-                    <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
-                    </asp:UpdatePanel>
                 </asp:ContentPlaceHolder>
             </section>
         </div>
@@ -76,16 +73,14 @@
             </section>
         </div>
 
-        <div id="top" style="position: absolute; top: 50px; left: 328px; height: auto; width: auto;">
+        <div id="top" style="position: absolute; top: 50px; left: 35%; height: auto; width: auto; background-color: #0099FF">
             <section>
-                <asp:ContentPlaceHolder runat="server" ID="TopContent">
-                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                        <ContentTemplate>
-                            usernamelabel;
-                        </ContentTemplate>
-                    </asp:UpdatePanel>
-
-                </asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder runat="server" ID="TopContent" />
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+                        <asp:Label ID="Label1" runat="server" Text="Energy: "></asp:Label>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
             </section>
         </div>
 
