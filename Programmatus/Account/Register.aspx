@@ -2,8 +2,7 @@
 
 <asp:Content runat="server" IDdiv="BodyContent" ContentPlaceHolderID="MainContent">
     <hgroup class="title">
-        <h1><%: Title %>.</h1>
-        <h2>Use the form below to create a new account.</h2>
+        <h2>Create a new account.</h2>
     </hgroup>
 
     <asp:CreateUserWizard runat="server" ID="RegisterUser" ViewStateMode="Disabled" OnCreatedUser="RegisterUser_CreatedUser">

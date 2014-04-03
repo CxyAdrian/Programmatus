@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <meta charset="utf-8" />
-    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <title><%: Page.Title %> </title>
     <asp:PlaceHolder ID="PlaceHolder1" runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
@@ -27,8 +27,6 @@
         </div>
         <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="false">
             <Scripts>
-                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=272931&clcid=0x409 --%>
-                <%--Framework scripts--%>
                 <asp:ScriptReference Name="MsAjaxBundle" />
                 <asp:ScriptReference Name="jquery" />
                 <asp:ScriptReference Name="jquery.ui.combined" />
@@ -41,18 +39,13 @@
                 <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
                 <asp:ScriptReference Name="WebFormsBundle" />
-                <%--Site scripts--%>
             </Scripts>
         </asp:ScriptManager>
         <div id="body" style="position: absolute; top: 25%; left: 25%; margin-top: auto; margin-left: auto; width: 50%; height: auto;">
             <section>
                 <asp:ContentPlaceHolder runat="server" ID="GameContent" />
-                <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                <asp:UpdatePanel ID="MainUpdatePanel" runat="server">
                     <ContentTemplate>
-                        <fieldset>
-                            <legend>UpdatePanel</legend>
-                            <asp:Label ID="Label2" runat="server" Text="test"></asp:Label>
-                        </fieldset>
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </section>
@@ -82,7 +75,7 @@
         <div id="top" style="position: absolute; top: 50px; left: 35%; height: auto; width: auto; background-color: #0099FF">
             <section>
                 <asp:ContentPlaceHolder runat="server" ID="TopContent" />
-                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                <asp:UpdatePanel ID="TopUpdatePanel" runat="server">
                     <ContentTemplate>
                         User:<a id="A2" runat="server" class="username" href="~/Account/Manage" title="Manage your account">
                             <asp:LoginName ID="LoginName2" runat="server" CssClass="username" />
