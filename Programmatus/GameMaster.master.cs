@@ -30,5 +30,37 @@ public partial class GameMaster : System.Web.UI.MasterPage
     }
     protected void Overview_clicked(object sender, EventArgs e)
     {
+<<<<<<< HEAD
+=======
+        
+    }
+    protected void Market_clicked(object sender, EventArgs e)
+    {
+
+    }
+    protected void Skills_clicked(object sender, EventArgs e)
+    {
+
+    }
+    protected void Job_clicked(object sender, EventArgs e)
+    {
+
+    }
+    protected void Hack_clicked(object sender, EventArgs e)
+    {
+
+    }
+    protected void Job1_clicked(object sender, EventArgs e)
+    {
+
+    }
+    protected void Job2_clicked(object sender, EventArgs e)
+    {
+
+    }
+    protected void Job3_clicked(object sender, EventArgs e)
+    {
+
+>>>>>>> cf2f79bcb87e03554243a8309f8167685bdbe6b7
     }
 }

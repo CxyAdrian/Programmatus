@@ -22,7 +22,7 @@
 <body>
     <form runat="server">
         <div class="float-left">
-            <img src="http://localhost:2737/Programmatus/Images/logo2.jpg" alt="logo" />
+            <img src="http://localhost:52453/Programmatus/Images/logo2.jpg" alt="logo" />
         </div>
         <asp:ScriptManager ID="ScriptManager1" runat="server">
             <Scripts>
