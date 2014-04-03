@@ -29,6 +29,6 @@ public partial class GameMaster : System.Web.UI.MasterPage
         con.Close();*/
     }
     protected void Overview_clicked(object sender, EventArgs e){
-        Label6.Text = "Du trykket på Overview.";
+        Label2.Text = "Du trykket på Overview.";
     }
 }

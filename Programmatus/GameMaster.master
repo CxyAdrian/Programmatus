@@ -23,7 +23,7 @@
 <body>
     <form id="form1" runat="server">
         <div class="float-left">
-            <img src="http://localhost:52453/Programmatus/Images/logo2.jpg" alt="logo" />
+            <img src="http://localhost:2737/Programmatus/Images/logo2.jpg" alt="logo" />
         </div>
         <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="false">
             <Scripts>
@@ -42,14 +42,19 @@
                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
                 <asp:ScriptReference Name="WebFormsBundle" />
                 <%--Site scripts--%>
-
             </Scripts>
         </asp:ScriptManager>
         <div id="body" style="position: absolute; top: 25%; left: 25%; margin-top: auto; margin-left: auto; width: 50%; height: auto;">
-
             <section>
-                <asp:ContentPlaceHolder runat="server" ID="GameContent">
-                </asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder runat="server" ID="GameContent" />
+                <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                    <ContentTemplate>
+                        <fieldset>
+                            <legend>UpdatePanel</legend>
+                            <asp:Label ID="Label2" runat="server" Text="test"></asp:Label>
+                        </fieldset>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
             </section>
         </div>
 
@@ -80,12 +85,11 @@
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                     <ContentTemplate>
                         User:<a id="A2" runat="server" class="username" href="~/Account/Manage" title="Manage your account">
-                                <asp:LoginName ID="LoginName2" runat="server" CssClass="username" />
-                                </a>
-                        <asp:Label ID="Label1" runat="server" Text="Energy: " Style="Left:75%;"></asp:Label><br />
-                        
-                    <asp:Label ID="Label6" runat="server" Text="Panel created."></asp:Label>
-                        
+                            <asp:LoginName ID="LoginName2" runat="server" CssClass="username" />
+                        </a>
+                        <asp:Label ID="Label1" runat="server" Text="Energy: " Style="Left: 75%;"></asp:Label>
+                        <br />
+                        <asp:Label ID="Label6" runat="server" Text="Panel created."></asp:Label>
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </section>
@@ -94,7 +98,7 @@
         <div id="left" style="position: absolute; top: 25%; left: 15%; width: auto; height: auto;">
             <section>
                 <asp:ContentPlaceHolder runat="server" ID="LeftContent" />
-                <asp:Button ID="Overview" runat="server" BackColor="#0099FF" Text="Overview" Width="112px" />
+                <asp:Button ID="Overview" runat="server" OnClick="Overview_clicked" BackColor="#0099FF" Text="Overview" Width="112px" />
                 <br />
                 <asp:Button ID="Market" runat="server" Text="Market" BackColor="#0099FF" Width="112px" />
                 <br />

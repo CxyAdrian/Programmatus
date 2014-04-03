@@ -2,14 +2,6 @@
 
 
 <asp:Content runat="server" ID="body" ContentPlaceHolderID="GameContent">
-    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-        <ContentTemplate>
-            <fieldset>
-                <legend>UpdatePanel</legend>
-                    <asp:Label ID="Label6" runat="server" Text="test"></asp:Label>
-                </fieldset>
-        </ContentTemplate>
-    </asp:UpdatePanel>
 </asp:Content>
 
 <asp:Content runat="server" ID="top" ContentPlaceHolderID="TopContent">
