@@ -28,7 +28,36 @@ public partial class GameMaster : System.Web.UI.MasterPage
         reader.Close();
         con.Close();*/
     }
-    protected void Overview_clicked(object sender, EventArgs e){
-        Label2.Text = "Du trykket på Overview.";
+    protected void Overview_clicked(object sender, EventArgs e)
+    {
+        
+    }
+    protected void Market_clicked(object sender, EventArgs e)
+    {
+
+    }
+    protected void Skills_clicked(object sender, EventArgs e)
+    {
+
+    }
+    protected void Job_clicked(object sender, EventArgs e)
+    {
+
+    }
+    protected void Hack_clicked(object sender, EventArgs e)
+    {
+
+    }
+    protected void Job1_clicked(object sender, EventArgs e)
+    {
+
+    }
+    protected void Job2_clicked(object sender, EventArgs e)
+    {
+
+    }
+    protected void Job3_clicked(object sender, EventArgs e)
+    {
+
     }
 }

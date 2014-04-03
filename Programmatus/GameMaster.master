@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <meta charset="utf-8" />
-    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <title><%: Page.Title %></title>
     <asp:PlaceHolder ID="PlaceHolder1" runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
@@ -23,12 +23,10 @@
 <body>
     <form id="form1" runat="server">
         <div class="float-left">
-            <img src="http://localhost:2737/Programmatus/Images/logo2.jpg" alt="logo" />
+            <img src="http://localhost:52453/Programmatus/Images/logo2.jpg" alt="logo" />
         </div>
         <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="false">
             <Scripts>
-                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=272931&clcid=0x409 --%>
-                <%--Framework scripts--%>
                 <asp:ScriptReference Name="MsAjaxBundle" />
                 <asp:ScriptReference Name="jquery" />
                 <asp:ScriptReference Name="jquery.ui.combined" />
@@ -41,18 +39,63 @@
                 <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
                 <asp:ScriptReference Name="WebFormsBundle" />
-                <%--Site scripts--%>
             </Scripts>
         </asp:ScriptManager>
-        <div id="body" style="position: absolute; top: 25%; left: 25%; margin-top: auto; margin-left: auto; width: 50%; height: auto;">
+        <div id="body" style="position: absolute; top: 25%; left: 20%; margin-top: auto; margin-left: auto; width: 60%; height: 100%;">
             <section>
-                <asp:ContentPlaceHolder runat="server" ID="GameContent" />
+                <asp:ContentPlaceHolder runat="server" ID="GameContent">
+                </asp:ContentPlaceHolder>
                 <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                     <ContentTemplate>
-                        <fieldset>
-                            <legend>UpdatePanel</legend>
-                            <asp:Label ID="Label2" runat="server" Text="test"></asp:Label>
-                        </fieldset>
+
+                        <!--Job-->
+                        <asp:Panel ID="Job1" runat="server" Style="position: absolute; top: 5%; left: 5%; margin-top: auto; margin-left: auto; width: 350px; height: 200px;" BorderStyle="Double">
+                            <asp:Label ID="Job1tekst" Text="<b>Intercept a bank transaction</b>" runat="server" />
+                            <br />
+                            <img src="http://localhost:52453/Programmatus/Images/Job1.jpg" alt="job1" />
+                            <br />
+                            <asp:Label ID="Job1Lvlreq" Text="Level Required: " runat="server" style="position:absolute; left:2%"/>
+                            <asp:Label ID="Job1cashgain" Text="Cash: " runat="server" style="position:absolute; left:35%"/>
+                            <asp:Label ID="Job1Expgain" Text="Experience: " runat="server" style="position:absolute; left:60%"/>
+                            <br />
+                            <br />
+                            <asp:Button ID="Button1" runat="server" OnClick="Job1_clicked" Text="Start Job" Style="position: absolute; left:-1.5%; width: 350px; height: 30px;" />
+                        </asp:Panel>
+
+                        <!--JOB2-->
+                        <asp:Panel ID="Job2" runat="server" Style="position: absolute; top: 5%; right: 5%; margin-top: auto; margin-left: auto; width: 350px; height: 200px;" BorderStyle="Double">
+                            <asp:Label ID="Job2tekst" Text="NOPE" runat="server" />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <asp:Label ID="Job2lvlreq" Text="Level Required: " runat="server" style="position:absolute; left:2%"/>
+                            <asp:Label ID="Job2Cashgain" Text="Cash: " runat="server" style="position:absolute; left:35%"/>
+                            <asp:Label ID="Job2Expgain" Text="Experience: " runat="server" style="position:absolute; left:60%"/>
+                            <br />
+                            <br />
+                            <br />
+                            <asp:Button ID="Button2" runat="server" OnClick="Job2_clicked" Text="Start Job" Style="position: absolute; left:-1.5%; width: 350px; height: 30px;" />
+                        </asp:Panel>
+
+                        <!--JOB3-->
+                        <asp:Panel ID="Job3" runat="server" Style="position: absolute; top: 37.5%; left: 5%; margin-top: auto; margin-left: auto; width: 350px; height: 200px;" BorderStyle="Double">
+                            <asp:Label ID="Job3tekst" Text="Job nummero tres" runat="server" />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <asp:Label ID="Job3lvlreq" Text="Level Required: " runat="server" style="position:absolute; left:2%"/>
+                            <asp:Label ID="job3Cashgain" Text="Cash: " runat="server" style="position:absolute; left:35%"/>
+                            <asp:Label ID="Job3Expgain" Text="Experience: " runat="server" style="position:absolute; left:60%"/>
+                            <br />
+                            <br />
+                            <br />
+                            <asp:Button ID="Button3" runat="server" OnClick="Job3_clicked" Text="Start Job" Style="position: absolute; left:-1.5%; width: 350px; height: 30px;" />
+                        </asp:Panel>
+                        <br />
+
+
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </section>
@@ -87,26 +130,25 @@
                         User:<a id="A2" runat="server" class="username" href="~/Account/Manage" title="Manage your account">
                             <asp:LoginName ID="LoginName2" runat="server" CssClass="username" />
                         </a>
-                        <asp:Label ID="Label1" runat="server" Text="Energy: " Style="Left: 75%;"></asp:Label>
+                        <asp:Label ID="Label1" runat="server" Text="Energy: "></asp:Label>
                         <br />
-                        <asp:Label ID="Label6" runat="server" Text="Panel created."></asp:Label>
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </section>
         </div>
 
-        <div id="left" style="position: absolute; top: 25%; left: 15%; width: auto; height: auto;">
+        <div id="left" style="position: absolute; top: 25%; left: 10%; width: auto; height: auto;">
             <section>
                 <asp:ContentPlaceHolder runat="server" ID="LeftContent" />
                 <asp:Button ID="Overview" runat="server" OnClick="Overview_clicked" BackColor="#0099FF" Text="Overview" Width="112px" />
                 <br />
-                <asp:Button ID="Market" runat="server" Text="Market" BackColor="#0099FF" Width="112px" />
+                <asp:Button ID="Market" runat="server" OnClick="Market_clicked" Text="Market" BackColor="#0099FF" Width="112px" />
                 <br />
-                <asp:Button ID="Skills" runat="server" BackColor="#0099FF" Text="Train skills" Width="112px" />
+                <asp:Button ID="Skills" runat="server" OnClick="Skills_clicked" BackColor="#0099FF" Text="Train skills" Width="112px" />
                 <br />
-                <asp:Button ID="Job" runat="server" Text="Job" BackColor="#0099FF" Width="112px" />
+                <asp:Button ID="Job" runat="server" OnClick="Job_clicked" Text="Job" BackColor="#0099FF" Width="112px" />
                 <br />
-                <asp:Button ID="Hack" runat="server" Text="Hack player" BackColor="#0099FF" Width="112px" />
+                <asp:Button ID="Hack" runat="server" OnClick="Hack_clicked" Text="Hack player" BackColor="#0099FF" Width="112px" />
             </section>
         </div>
 
