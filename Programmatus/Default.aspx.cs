@@ -11,4 +11,8 @@ public partial class _Default : Page
     {
 
     }
+    protected void Overview_clicked(object sender, EventArgs e)
+    {
+        Label6.Text = "Du trykket på Overview.";
+    }
 }

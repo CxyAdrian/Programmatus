@@ -16,7 +16,7 @@ public partial class GameMaster : System.Web.UI.MasterPage
     String sqlcommand = "SELECT Username FROM Player";*/
     protected void Page_Load(object sender, EventArgs e)
     {
-        
+
         String username = HttpContext.Current.User.Identity.Name;
         Label usernamelabel = new Label();
         usernamelabel.Text = username;
@@ -27,6 +27,8 @@ public partial class GameMaster : System.Web.UI.MasterPage
         Label1.Text = reader["Username"].ToString();
         reader.Close();
         con.Close();*/
-
+    }
+    protected void Overview_clicked(object sender, EventArgs e){
+        Label6.Text = "Du trykket på Overview.";
     }
 }

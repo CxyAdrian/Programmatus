@@ -23,7 +23,7 @@
 <body>
     <form id="form1" runat="server">
         <div class="float-left">
-            <img src="http://localhost:2737/Programmatus/Images/logo2.jpg" alt="logo" />
+            <img src="http://localhost:52453/Programmatus/Images/logo2.jpg" alt="logo" />
         </div>
         <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="false">
             <Scripts>
@@ -42,6 +42,7 @@
                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
                 <asp:ScriptReference Name="WebFormsBundle" />
                 <%--Site scripts--%>
+
             </Scripts>
         </asp:ScriptManager>
         <div id="body" style="position: absolute; top: 25%; left: 25%; margin-top: auto; margin-left: auto; width: 50%; height: auto;">
@@ -78,7 +79,13 @@
                 <asp:ContentPlaceHolder runat="server" ID="TopContent" />
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                     <ContentTemplate>
-                        <asp:Label ID="Label1" runat="server" Text="Energy: "></asp:Label>
+                        User:<a id="A2" runat="server" class="username" href="~/Account/Manage" title="Manage your account">
+                                <asp:LoginName ID="LoginName2" runat="server" CssClass="username" />
+                                </a>
+                        <asp:Label ID="Label1" runat="server" Text="Energy: " Style="Left:75%;"></asp:Label><br />
+                        
+                    <asp:Label ID="Label6" runat="server" Text="Panel created."></asp:Label>
+                        
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </section>
