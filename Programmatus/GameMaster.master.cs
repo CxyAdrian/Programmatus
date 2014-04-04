@@ -30,37 +30,50 @@ public partial class GameMaster : System.Web.UI.MasterPage
     }
     protected void Overview_clicked(object sender, EventArgs e)
     {
-<<<<<<< HEAD
-=======
-        
+        Job1.Visible = false;
+        Job2.Visible = false;
+        Job3.Visible = false; 
     }
     protected void Market_clicked(object sender, EventArgs e)
     {
-
+        Job1.Visible = false;
+        Job2.Visible = false;
+        Job3.Visible = false;
     }
     protected void Skills_clicked(object sender, EventArgs e)
     {
-
+        Job1.Visible = false;
+        Job2.Visible = false;
+        Job3.Visible = false;
     }
     protected void Job_clicked(object sender, EventArgs e)
     {
-
+        Job1.Visible = true;
+        Job2.Visible = true;
+        Job3.Visible = true;
     }
     protected void Hack_clicked(object sender, EventArgs e)
     {
-
+        Job1.Visible = false;
+        Job2.Visible = false;
+        Job3.Visible = false;
     }
     protected void Job1_clicked(object sender, EventArgs e)
     {
-
+        Job1.Visible = false;
+        Job2.Visible = false;
+        Job3.Visible = false;
     }
     protected void Job2_clicked(object sender, EventArgs e)
     {
-
+        Job1.Visible = false;
+        Job2.Visible = false;
+        Job3.Visible = false;
     }
     protected void Job3_clicked(object sender, EventArgs e)
     {
-
->>>>>>> cf2f79bcb87e03554243a8309f8167685bdbe6b7
+        Job1.Visible = false;
+        Job2.Visible = false;
+        Job3.Visible = false;
     }
 }

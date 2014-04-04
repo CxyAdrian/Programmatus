@@ -5,11 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <meta charset="utf-8" />
-<<<<<<< HEAD
     <title><%: Page.Title %> </title>
-=======
-    <title><%: Page.Title %></title>
->>>>>>> cf2f79bcb87e03554243a8309f8167685bdbe6b7
     <asp:PlaceHolder ID="PlaceHolder1" runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
@@ -47,18 +43,13 @@
         </asp:ScriptManager>
         <div id="body" style="position: absolute; top: 25%; left: 20%; margin-top: auto; margin-left: auto; width: 60%; height: 100%;">
             <section>
-<<<<<<< HEAD
-                <asp:ContentPlaceHolder runat="server" ID="GameContent" />
-                <asp:UpdatePanel ID="MainUpdatePanel" runat="server">
-                    <ContentTemplate>
-=======
                 <asp:ContentPlaceHolder runat="server" ID="GameContent">
                 </asp:ContentPlaceHolder>
                 <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                     <ContentTemplate>
 
                         <!--Job-->
-                        <asp:Panel ID="Job1" runat="server" Style="position: absolute; top: 5%; left: 5%; margin-top: auto; margin-left: auto; width: 350px; height: 200px;" BorderStyle="Double">
+                        <asp:Panel ID="Job1" visible="false" runat="server" Style="position: absolute; top: 5%; left: 5%; margin-top: auto; margin-left: auto; width: 350px; height: 200px;" BorderStyle="Double">
                             <asp:Label ID="Job1tekst" Text="<b>Intercept a bank transaction</b>" runat="server" />
                             <br />
                             <img src="http://localhost:52453/Programmatus/Images/Job1.jpg" alt="job1" />
@@ -72,7 +63,7 @@
                         </asp:Panel>
 
                         <!--JOB2-->
-                        <asp:Panel ID="Job2" runat="server" Style="position: absolute; top: 5%; right: 5%; margin-top: auto; margin-left: auto; width: 350px; height: 200px;" BorderStyle="Double">
+                        <asp:Panel ID="Job2" visible="false" runat="server" Style="position: absolute; top: 5%; right: 5%; margin-top: auto; margin-left: auto; width: 350px; height: 200px;" BorderStyle="Double">
                             <asp:Label ID="Job2tekst" Text="NOPE" runat="server" />
                             <br />
                             <br />
@@ -88,7 +79,7 @@
                         </asp:Panel>
 
                         <!--JOB3-->
-                        <asp:Panel ID="Job3" runat="server" Style="position: absolute; top: 37.5%; left: 5%; margin-top: auto; margin-left: auto; width: 350px; height: 200px;" BorderStyle="Double">
+                        <asp:Panel ID="Job3" visible="false" runat="server" Style="position: absolute; top: 37.5%; left: 5%; margin-top: auto; margin-left: auto; width: 350px; height: 200px;" BorderStyle="Double">
                             <asp:Label ID="Job3tekst" Text="Job nummero tres" runat="server" />
                             <br />
                             <br />
@@ -104,8 +95,6 @@
                         </asp:Panel>
                         <br />
 
-
->>>>>>> cf2f79bcb87e03554243a8309f8167685bdbe6b7
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </section>
