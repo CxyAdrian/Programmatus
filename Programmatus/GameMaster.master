@@ -48,6 +48,17 @@
                 <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                     <ContentTemplate>
 
+                        <!--Train Skills-->
+                        <asp:Panel ID="TrainSkills" visible="false" runat="server" style="position:absolute; top:5%; left:5%; margin-top:auto; margin-left:auto; width:350px; height:500px;" BorderStyle="Double">
+                            <asp:Label ID="Efficiency" Text="<b>Efficiency</b>" runat="server" Style="position:absolute; top:5%; left:5%; margin-top:auto; margin-left:auto;"/>
+                            <asp:Button ID="TrainEfficiency" runat="server" OnClick="TrainEfficiency_clicked" Text="+" Style="position:absolute; top:5%; right:5%; width:25px; height:25px;" />
+                            <asp:Label ID="Security" Text="<b>Security</b>" runat="server" Style="position:absolute; top:12.5%; left:5%; margin-top:auto; margin-left:auto;"/>
+                            <asp:Button ID="TrainSecurity" runat="server" OnClick="TrainSecurity_clicked" Text="+" Style="position:absolute; top:12.5%; right:5%; width:25px; height:25px;" />
+                            <asp:Label ID="Bargaining" Text="<b>Bargaining</b>" runat="server" Style="position:absolute; top:20%; left:5%; margin-top:auto; margin-left:auto;"/>
+                            <asp:Button ID="TrainBargaining" runat="server" OnClick="TrainBargaining_clicked" Text="+" Style="position:absolute; top:20%; right:5%; width:25px; height:25px;" />
+
+                        </asp:Panel>
+
                         <!--Job-->
                         <asp:Panel ID="Job1" visible="false" runat="server" Style="position: absolute; top: 5%; left: 5%; margin-top: auto; margin-left: auto; width: 350px; height: 200px;" BorderStyle="Double">
                             <asp:Label ID="Job1tekst" Text="<b>Intercept a bank transaction</b>" runat="server" />
