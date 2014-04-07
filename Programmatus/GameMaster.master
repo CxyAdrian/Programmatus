@@ -49,60 +49,60 @@
                     <ContentTemplate>
 
                         <!--Train Skills-->
-                        <asp:Panel ID="TrainSkills" visible="false" runat="server" style="position:absolute; top:5%; left:5%; margin-top:auto; margin-left:auto; width:350px; height:500px;" BorderStyle="Double">
-                            <asp:Label ID="Efficiency" Text="<b>Efficiency</b>" runat="server" Style="position:absolute; top:5%; left:5%; margin-top:auto; margin-left:auto;"/>
-                            <asp:Button ID="TrainEfficiency" runat="server" OnClick="TrainEfficiency_clicked" Text="+" Style="position:absolute; top:5%; right:5%; width:25px; height:25px;" />
-                            <asp:Label ID="Security" Text="<b>Security</b>" runat="server" Style="position:absolute; top:12.5%; left:5%; margin-top:auto; margin-left:auto;"/>
-                            <asp:Button ID="TrainSecurity" runat="server" OnClick="TrainSecurity_clicked" Text="+" Style="position:absolute; top:12.5%; right:5%; width:25px; height:25px;" />
-                            <asp:Label ID="Bargaining" Text="<b>Bargaining</b>" runat="server" Style="position:absolute; top:20%; left:5%; margin-top:auto; margin-left:auto;"/>
-                            <asp:Button ID="TrainBargaining" runat="server" OnClick="TrainBargaining_clicked" Text="+" Style="position:absolute; top:20%; right:5%; width:25px; height:25px;" />
+                        <asp:Panel ID="TrainSkills" Visible="false" runat="server" Style="position: absolute; top: 5%; left: 5%; margin-top: auto; margin-left: auto; width: 350px; height: 500px;" BorderStyle="Double">
+                            <asp:Label ID="Efficiency" Text="<b>Efficiency</b>" runat="server" Style="position: absolute; top: 5%; left: 5%; margin-top: auto; margin-left: auto;" />
+                            <asp:Button ID="TrainEfficiency" runat="server" OnClick="TrainEfficiency_clicked" Text="+" Style="position: absolute; top: 5%; right: 5%; width: 25px; height: 25px;" />
+                            <asp:Label ID="Security" Text="<b>Security</b>" runat="server" Style="position: absolute; top: 12.5%; left: 5%; margin-top: auto; margin-left: auto;" />
+                            <asp:Button ID="TrainSecurity" runat="server" OnClick="TrainSecurity_clicked" Text="+" Style="position: absolute; top: 12.5%; right: 5%; width: 25px; height: 25px;" />
+                            <asp:Label ID="Bargaining" Text="<b>Bargaining</b>" runat="server" Style="position: absolute; top: 20%; left: 5%; margin-top: auto; margin-left: auto;" />
+                            <asp:Button ID="TrainBargaining" runat="server" OnClick="TrainBargaining_clicked" Text="+" Style="position: absolute; top: 20%; right: 5%; width: 25px; height: 25px;" />
 
                         </asp:Panel>
 
                         <!--Job-->
-                        <asp:Panel ID="Job1" visible="false" runat="server" Style="position: absolute; top: 5%; left: 5%; margin-top: auto; margin-left: auto; width: 350px; height: 200px;" BorderStyle="Double">
+                        <asp:Panel ID="Job1" Visible="false" runat="server" Style="position: absolute; top: 5%; left: 5%; margin-top: auto; margin-left: auto; width: 350px; height: 200px;" BorderStyle="Double">
                             <asp:Label ID="Job1tekst" Text="<b>Intercept a bank transaction</b>" runat="server" />
                             <br />
                             <img src="http://localhost:52453/Programmatus/Images/Job1.jpg" alt="job1" />
                             <br />
-                            <asp:Label ID="Job1Lvlreq" Text="Level Required: " runat="server" style="position:absolute; left:2%"/>
-                            <asp:Label ID="Job1cashgain" Text="Cash: " runat="server" style="position:absolute; left:35%"/>
-                            <asp:Label ID="Job1Expgain" Text="Experience: " runat="server" style="position:absolute; left:60%"/>
+                            <asp:Label ID="Job1Lvlreq" Text="Level Required: " runat="server" Style="position: absolute; left: 2%" />
+                            <asp:Label ID="Job1cashgain" Text="Cash: " runat="server" Style="position: absolute; left: 35%" />
+                            <asp:Label ID="Job1Expgain" Text="Experience: " runat="server" Style="position: absolute; left: 60%" />
                             <br />
                             <br />
-                            <asp:Button ID="Button1" runat="server" OnClick="Job1_clicked" Text="Start Job" Style="position: absolute; left:-1.5%; width: 350px; height: 30px;" />
+                            <asp:Button ID="Button1" runat="server" OnClick="Job1_clicked" Text="Start Job" Style="position: absolute; left: -1.5%; width: 350px; height: 30px;" />
                         </asp:Panel>
 
                         <!--JOB2-->
-                        <asp:Panel ID="Job2" visible="false" runat="server" Style="position: absolute; top: 5%; right: 5%; margin-top: auto; margin-left: auto; width: 350px; height: 200px;" BorderStyle="Double">
+                        <asp:Panel ID="Job2" Visible="false" runat="server" Style="position: absolute; top: 5%; right: 5%; margin-top: auto; margin-left: auto; width: 350px; height: 200px;" BorderStyle="Double">
                             <asp:Label ID="Job2tekst" Text="NOPE" runat="server" />
                             <br />
                             <br />
                             <br />
                             <br />
-                            <asp:Label ID="Job2lvlreq" Text="Level Required: " runat="server" style="position:absolute; left:2%"/>
-                            <asp:Label ID="Job2Cashgain" Text="Cash: " runat="server" style="position:absolute; left:35%"/>
-                            <asp:Label ID="Job2Expgain" Text="Experience: " runat="server" style="position:absolute; left:60%"/>
+                            <asp:Label ID="Job2lvlreq" Text="Level Required: " runat="server" Style="position: absolute; left: 2%" />
+                            <asp:Label ID="Job2Cashgain" Text="Cash: " runat="server" Style="position: absolute; left: 35%" />
+                            <asp:Label ID="Job2Expgain" Text="Experience: " runat="server" Style="position: absolute; left: 60%" />
                             <br />
                             <br />
                             <br />
-                            <asp:Button ID="Button2" runat="server" OnClick="Job2_clicked" Text="Start Job" Style="position: absolute; left:-1.5%; width: 350px; height: 30px;" />
+                            <asp:Button ID="Button2" runat="server" OnClick="Job2_clicked" Text="Start Job" Style="position: absolute; left: -1.5%; width: 350px; height: 30px;" />
                         </asp:Panel>
 
                         <!--JOB3-->
-                        <asp:Panel ID="Job3" visible="false" runat="server" Style="position: absolute; top: 37.5%; left: 5%; margin-top: auto; margin-left: auto; width: 350px; height: 200px;" BorderStyle="Double">
+                        <asp:Panel ID="Job3" Visible="false" runat="server" Style="position: absolute; top: 37.5%; left: 5%; margin-top: auto; margin-left: auto; width: 350px; height: 200px;" BorderStyle="Double">
                             <asp:Label ID="Job3tekst" Text="Job nummero tres" runat="server" />
                             <br />
                             <br />
                             <br />
                             <br />
-                            <asp:Label ID="Job3lvlreq" Text="Level Required: " runat="server" style="position:absolute; left:2%"/>
-                            <asp:Label ID="job3Cashgain" Text="Cash: " runat="server" style="position:absolute; left:35%"/>
-                            <asp:Label ID="Job3Expgain" Text="Experience: " runat="server" style="position:absolute; left:60%"/>
+                            <asp:Label ID="Job3lvlreq" Text="Level Required: " runat="server" Style="position: absolute; left: 2%" />
+                            <asp:Label ID="job3Cashgain" Text="Cash: " runat="server" Style="position: absolute; left: 35%" />
+                            <asp:Label ID="Job3Expgain" Text="Experience: " runat="server" Style="position: absolute; left: 60%" />
                             <br />
                             <br />
                             <br />
-                            <asp:Button ID="Button3" runat="server" OnClick="Job3_clicked" Text="Start Job" Style="position: absolute; left:-1.5%; width: 350px; height: 30px;" />
+                            <asp:Button ID="Button3" runat="server" OnClick="Job3_clicked" Text="Start Job" Style="position: absolute; left: -1.5%; width: 350px; height: 30px;" />
                         </asp:Panel>
                         <br />
 
