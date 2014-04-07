@@ -56,9 +56,10 @@
                             <asp:Button ID="TrainSecurity" runat="server" OnClick="TrainSecurity_clicked" Text="+" Style="position:absolute; top:12.5%; right:5%; width:25px; height:25px;" />
                             <asp:Label ID="Bargaining" Text="<b>Bargaining</b>" runat="server" Style="position:absolute; top:20%; left:5%; margin-top:auto; margin-left:auto;"/>
                             <asp:Button ID="TrainBargaining" runat="server" OnClick="TrainBargaining_clicked" Text="+" Style="position:absolute; top:20%; right:5%; width:25px; height:25px;" />
-
+                            
+                            <img src="http://localhost:52453/programmatus/Images/TrainSkills.jpg" alt="Train" style="position:absolute; top:0%; left:105%; width:375px; height:425px;" visible="false" />
                         </asp:Panel>
-
+                        
                         <!--Job-->
                         <asp:Panel ID="Job1" visible="false" runat="server" Style="position: absolute; top: 5%; left: 5%; margin-top: auto; margin-left: auto; width: 350px; height: 200px;" BorderStyle="Double">
                             <asp:Label ID="Job1tekst" Text="<b>Intercept a bank transaction</b>" runat="server" />
@@ -142,6 +143,7 @@
                         </a>
                         <asp:Label ID="Label1" runat="server" Text="Energy: "></asp:Label>
                         <br />
+
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </section>

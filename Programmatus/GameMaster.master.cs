@@ -54,6 +54,8 @@ public partial class GameMaster : System.Web.UI.MasterPage
     protected void Skills_clicked(object sender, EventArgs e)
     {
         TrainSkills.Visible = true;
+        
+
         Job1.Visible = false;
         Job2.Visible = false;
         Job3.Visible = false;
@@ -125,4 +127,7 @@ public partial class GameMaster : System.Web.UI.MasterPage
     }
     //Hack END -------------------------------------------------------------------------------------------------
     
+
+    //TOP CONTENT ---------------------------------------------------------------------------------------------
+
 }
