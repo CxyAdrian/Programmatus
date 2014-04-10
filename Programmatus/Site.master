@@ -22,7 +22,11 @@
 <body>
     <form runat="server">
         <div class="float-left">
+<<<<<<< HEAD
             <a href="../Default.aspx"><img src="http://localhost:52453/Programmatus/Images/logo2.jpg" alt="logo" /></a>
+=======
+             <a href="../Default.aspx"><img style="border:0;" src="http://localhost:52453/Programmatus/Images/logo2.jpg" alt="logo" /></a>
+>>>>>>> Lagt til constraints i db
         </div>
         <asp:ScriptManager ID="ScriptManager1" runat="server">
             <Scripts>
