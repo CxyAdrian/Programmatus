@@ -2,7 +2,6 @@
 <%@ Import Namespace="Programatus" %>
 <%@ Import Namespace="System.Web.Optimization" %>
 <%@ Import Namespace="System.Web.Routing" %>
-<%@ Import Namespace="System.Timers.Timer" %>
 
 <script runat="server">
 

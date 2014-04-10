@@ -23,7 +23,7 @@
 <body>
     <form id="form1" runat="server">
         <div class="float-left">
-            <img src="http://localhost:52453/Programmatus/Images/logo2.jpg" alt="logo" />
+            <a href="Default.aspx"><img src="http://localhost:52453/Programmatus/Images/logo2.jpg" alt="logo" /></a>
         </div>
         <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="false">
             <Scripts>
@@ -48,8 +48,18 @@
                 <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                     <ContentTemplate>
 
+                        <!--Overview layout-->
+                        <asp:Panel ID="OverviewImage" Visible="false" runat="server" style="position:absolute; top:5%; right:10%; margin-top:auto; margin-right:auto; width:250px; height:350px;" BorderStyle="Ridge">
+                            <asp:Label ID="CharacterPicture" Text="Character picture" runat="server" />
+                        </asp:Panel>
+                        <asp:Panel ID="OverviewSkills" Visible="false" runat="server" style="position:absolute; top:5%; left:10%; margin-top:auto; margin-left:auto; width:250px; height:350px;" BorderStyle="Double">
+                            <asp:Label ID="CharacterSkills" Text="Character skills" runat="server" />
+                        </asp:Panel>
+                        <asp:Panel ID="OverviewSetup" Visible="false" runat="server" style="position:absolute; top:60%; left:21%; margin-top:auto; margin-right:auto; width:450px; height:250px;" BorderStyle="Ridge">
+                            <asp:Label ID="characterItems" Text="Equiped items" runat="server" />
+                        </asp:Panel>
+
                         <!--Train Skills-->
-<<<<<<< HEAD
                         <asp:Panel ID="TrainSkills" visible="false" runat="server" style="position:absolute; top:5%; left:5%; margin-top:auto; margin-left:auto; width:350px; height:500px;" BorderStyle="Double">
                             <asp:Label ID="Efficiency" Text="<b>Efficiency</b>" runat="server" Style="position:absolute; top:5%; left:5%; margin-top:auto; margin-left:auto;"/>
                             <asp:Button ID="TrainEfficiency" runat="server" OnClick="TrainEfficiency_clicked" Text="+" Style="position:absolute; top:5%; right:5%; width:25px; height:25px;" />
@@ -59,16 +69,7 @@
                             <asp:Button ID="TrainBargaining" runat="server" OnClick="TrainBargaining_clicked" Text="+" Style="position:absolute; top:20%; right:5%; width:25px; height:25px;" />
                             
                             <img src="http://localhost:52453/programmatus/Images/TrainSkills.jpg" alt="Train" style="position:absolute; top:0%; left:105%; width:375px; height:425px;" visible="false" />
-=======
-                        <asp:Panel ID="TrainSkills" Visible="false" runat="server" Style="position: absolute; top: 5%; left: 5%; margin-top: auto; margin-left: auto; width: 350px; height: 500px;" BorderStyle="Double">
-                            <asp:Label ID="Efficiency" Text="<b>Efficiency</b>" runat="server" Style="position: absolute; top: 5%; left: 5%; margin-top: auto; margin-left: auto;" />
-                            <asp:Button ID="TrainEfficiency" runat="server" OnClick="TrainEfficiency_clicked" Text="+" Style="position: absolute; top: 5%; right: 5%; width: 25px; height: 25px;" />
-                            <asp:Label ID="Security" Text="<b>Security</b>" runat="server" Style="position: absolute; top: 12.5%; left: 5%; margin-top: auto; margin-left: auto;" />
-                            <asp:Button ID="TrainSecurity" runat="server" OnClick="TrainSecurity_clicked" Text="+" Style="position: absolute; top: 12.5%; right: 5%; width: 25px; height: 25px;" />
-                            <asp:Label ID="Bargaining" Text="<b>Bargaining</b>" runat="server" Style="position: absolute; top: 20%; left: 5%; margin-top: auto; margin-left: auto;" />
-                            <asp:Button ID="TrainBargaining" runat="server" OnClick="TrainBargaining_clicked" Text="+" Style="position: absolute; top: 20%; right: 5%; width: 25px; height: 25px;" />
 
->>>>>>> 2f707363bf5d2c68e10ae6b8dcf765d8780e985a
                         </asp:Panel>
                         
                         <!--Job-->

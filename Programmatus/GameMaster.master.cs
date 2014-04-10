@@ -18,9 +18,16 @@ public partial class GameMaster : System.Web.UI.MasterPage
 
  
     }
+
+    
+
     //Overview -------------------------------------------------------------------------------------------------
     protected void Overview_clicked(object sender, EventArgs e)
     {
+        OverviewImage.Visible = true;
+        OverviewSkills.Visible = true;
+        OverviewSetup.Visible = true;
+
         TrainSkills.Visible = false;
 
         Job1.Visible = false;
@@ -32,6 +39,10 @@ public partial class GameMaster : System.Web.UI.MasterPage
     //Market -----------------------------------------------------------------------------------------------------
     protected void Market_clicked(object sender, EventArgs e)
     {
+        OverviewImage.Visible = false;
+        OverviewSkills.Visible = false;
+        OverviewSetup.Visible = false;
+
         TrainSkills.Visible = false;
 
         Job1.Visible = false;
@@ -43,6 +54,10 @@ public partial class GameMaster : System.Web.UI.MasterPage
     //Train Skills -----------------------------------------------------------------------------------------------
     protected void Skills_clicked(object sender, EventArgs e)
     {
+        OverviewImage.Visible = false;
+        OverviewSkills.Visible = false;
+        OverviewSetup.Visible = false;
+
         TrainSkills.Visible = true;
         
 
@@ -52,18 +67,30 @@ public partial class GameMaster : System.Web.UI.MasterPage
     }
     protected void TrainEfficiency_clicked(object sender, EventArgs e)
     {
+        OverviewImage.Visible = false;
+        OverviewSkills.Visible = false;
+        OverviewSetup.Visible = false;
+
         Job1.Visible = false;
         Job2.Visible = false;
         Job3.Visible = false;
     }
     protected void TrainSecurity_clicked(object sender, EventArgs e)
     {
+        OverviewImage.Visible = false;
+        OverviewSkills.Visible = false;
+        OverviewSetup.Visible = false;
+
         Job1.Visible = false;
         Job2.Visible = false;
         Job3.Visible = false;
     }
     protected void TrainBargaining_clicked(object sender, EventArgs e)
     {
+        OverviewImage.Visible = false;
+        OverviewSkills.Visible = false;
+        OverviewSetup.Visible = false;
+
         Job1.Visible = false;
         Job2.Visible = false;
         Job3.Visible = false;
@@ -73,6 +100,10 @@ public partial class GameMaster : System.Web.UI.MasterPage
     //JOB ----------------------------------------------------------------------------------------------------------
     protected void Job_clicked(object sender, EventArgs e)
     {
+        OverviewImage.Visible = false;
+        OverviewSkills.Visible = false;
+        OverviewSetup.Visible = false;
+
         TrainSkills.Visible = false;
 
         Job1.Visible = true;
@@ -82,6 +113,10 @@ public partial class GameMaster : System.Web.UI.MasterPage
     
     protected void Job1_clicked(object sender, EventArgs e)
     {
+        OverviewImage.Visible = false;
+        OverviewSkills.Visible = false;
+        OverviewSetup.Visible = false;
+
         TrainSkills.Visible = false;
 
         Job1.Visible = false;
@@ -90,6 +125,10 @@ public partial class GameMaster : System.Web.UI.MasterPage
     }
     protected void Job2_clicked(object sender, EventArgs e)
     {
+        OverviewImage.Visible = false;
+        OverviewSkills.Visible = false;
+        OverviewSetup.Visible = false;
+
         TrainSkills.Visible = false;
 
         Job1.Visible = false;
@@ -98,6 +137,10 @@ public partial class GameMaster : System.Web.UI.MasterPage
     }
     protected void Job3_clicked(object sender, EventArgs e)
     {
+        OverviewImage.Visible = false;
+        OverviewSkills.Visible = false;
+        OverviewSetup.Visible = false;
+
         TrainSkills.Visible = false;
 
         Job1.Visible = false;
@@ -109,6 +152,10 @@ public partial class GameMaster : System.Web.UI.MasterPage
     //Hack ------------------------------------------------------------------------------------------------------
     protected void Hack_clicked(object sender, EventArgs e)
     {
+        OverviewImage.Visible = false;
+        OverviewSkills.Visible = false;
+        OverviewSetup.Visible = false;
+
         TrainSkills.Visible = false;
 
         Job1.Visible = false;
