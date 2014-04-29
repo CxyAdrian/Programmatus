@@ -145,7 +145,7 @@
             </section>
         </div>
 
-        <div id="top" style="position: absolute; top: 50px; left: 35%; height: auto; width: auto; background-color: #0099FF">
+        <div id="top" style="position: absolute; top: 50px; left: 20%; height: 10%; width: 60%; background-color: #0099FF">
             <section>
                 <asp:ContentPlaceHolder runat="server" ID="TopContent" />
                 <asp:UpdatePanel ID="TopUpdatePanel" runat="server">
