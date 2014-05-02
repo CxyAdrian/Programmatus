@@ -72,7 +72,7 @@
 
                         </asp:Panel>
                         
-                        <!--Job-->
+                        <!--Job1-->
                         <asp:Panel ID="Job1" Visible="false" runat="server" Style="position: absolute; top: 5%; left: 5%; margin-top: auto; margin-left: auto; width: 350px; height: 200px;" BorderStyle="Double">
                             <asp:Label ID="Job1tekst" Text="<b>Intercept a bank transaction</b>" runat="server" />
                             <br />

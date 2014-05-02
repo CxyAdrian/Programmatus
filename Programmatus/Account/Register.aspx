@@ -2,7 +2,9 @@
 
 <asp:Content runat="server" IDdiv="BodyContent" ContentPlaceHolderID="MainContent">
     <hgroup class="title">
-        <h2>Create a new account.</h2>
+        <h2>Create a new account.<br />
+        </h2>
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
     </hgroup>
 
     <asp:CreateUserWizard runat="server" ID="RegisterUser" ViewStateMode="Disabled" OnCreatedUser="RegisterUser_CreatedUser">

@@ -11,8 +11,7 @@ using System.Web.Security;
 
 public partial class GameMaster : System.Web.UI.MasterPage
 {
-
-  
+    
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -67,6 +66,25 @@ public partial class GameMaster : System.Web.UI.MasterPage
     }
     protected void TrainEfficiency_clicked(object sender, EventArgs e)
     {
+        SqlConnection connection = new SqlConnection(WebConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
+        string uID = Session["userID"].ToString();
+        SqlCommand cmd = new SqlCommand(uID, connection);
+        cmd.Parameters.AddWithValue("@uID", uID);
+        SqlCommand Efficiencytrained = new SqlCommand("UPDATE Player SET Efficiency=Efficiency+1 WHERE userId=@uID", connection);
+
+        try
+        {
+            connection.Open();
+            Efficiencytrained.ExecuteNonQuery();
+        }
+        catch (Exception ex)
+        {
+
+        }
+        finally
+        {
+            connection.Close();
+        }
         OverviewImage.Visible = false;
         OverviewSkills.Visible = false;
         OverviewSetup.Visible = false;
@@ -77,6 +95,7 @@ public partial class GameMaster : System.Web.UI.MasterPage
     }
     protected void TrainSecurity_clicked(object sender, EventArgs e)
     {
+
         OverviewImage.Visible = false;
         OverviewSkills.Visible = false;
         OverviewSetup.Visible = false;
